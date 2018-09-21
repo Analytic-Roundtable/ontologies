@@ -1,0 +1,3378 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.mitre.org/analysisexchange/AE.owl#"
+     xml:base="http://www.mitre.org/analysisexchange/AE.owl"
+     xmlns:sumo="http://www.ontologyportal.org/SUMO.owl#"
+     xmlns:AE="http://www.mitre.org/analysisexchange/AE.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.mitre.org/analysisexchange/AE.owl#">
+        <rdfs:comment>This ontology was developed by The MITRE Corporation in support of the Analysis Exchange research effort.
+The ontolgy includes references to the SUMO ontology.</rdfs:comment>
+        <rdfs:comment>@MITRE
+This ontology contains content from the SUMO ontology.
+
+@SUMO
+Access to and use of these products is governed by the GNU General Public 
+License &lt;http://www.gnu.org/copyleft/gpl.html&gt;. 
+By using these products, you agree to be bound by the terms of the GPL.
+
+We ask that people using or referencing this work cite our primary paper:
+
+Niles, I., and Pease, A.  2001.  Towards a Standard Upper Ontology.  In 
+Proceedings of the 2nd International Conference on Formal Ontology in 
+Information Systems (FOIS-2001), Chris Welty and Barry Smith, eds, 
+Ogunquit, Maine, October 17-19, 2001.  See also www.ontologyportal.org</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasAddress">
+        <rdfs:range rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasAgent">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment>@MITRE A relationship between an Event and the entity that is active in an event.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasBeneficiary -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasBeneficiary">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasBuilding -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasBuilding"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasCity -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasCity"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasCountry"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasDestination -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasDestination">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Region"/>
+        <rdfs:comment>@MITRE Denotes the location in which an event terminates.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasDistance -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasDistance">
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#LengthMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasEndRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasEndRegion">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Region"/>
+        <rdfs:comment>@MITRE The area associated with the end of a TransitRoute</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasExpectedTravelTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasExpectedTravelTime">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#TimeDuration"/>
+        <rdfs:comment>@MITRE The time that one would expect to travel along a specific route</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasItemizedExpense -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasItemizedExpense">
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#CurrencyMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasLocation"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasName">
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Name"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasOrigin">
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Region"/>
+        <rdfs:comment>@MITRE Denotes the location in which an event initiates.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasPath -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasPath">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Motion"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+        <rdfs:comment>@MITRE The path of a Motion event.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasRecipient -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasRecipient">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasResidence -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasResidence">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasSentiment -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasSentiment">
+        <rdfs:range rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+        <rdfs:comment>@MITRE A relationship to a sentiment expression that characterizes the general feelings about the iobject.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasSocialSecurityNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasSocialSecurityNumber">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:range rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SocialSecurityNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasStartRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasStartRegion">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Region"/>
+        <rdfs:comment>@MITRE The area associated with the begining of a TransitRoute</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasState"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasStreet -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasStreet">
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#PlaceAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasTelephoneNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasTelephoneNumber">
+        <rdfs:range rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#TelephoneNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasTheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasTheme">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVAVoucherTreatmentFacility -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVAVoucherTreatmentFacility">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+        <rdfs:comment xml:lang="en">A link to a VA facitlity at which care was provided.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVAVoucherTreatmentFacilityAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVAVoucherTreatmentFacilityAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#hasAddress"/>
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher"/>
+        <rdfs:range rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVoucherBeneficiary -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVoucherBeneficiary">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:comment xml:lang="en">A link to the individual that received treatment at a VA facility.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVoucherClaimant -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVoucherClaimant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:comment xml:lang="en">A link to the person who is claiming the travel reimbursement.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVoucherClaimantStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVoucherClaimantStatus">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher"/>
+        <rdfs:comment xml:lang="en">Encodes the claimant status on a VATravelVoucher</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVoucherTravel -->
+
+    <owl:ObjectProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVoucherTravel">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher"/>
+        <rdfs:range rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#Travelling"/>
+        <rdfs:comment xml:lang="en">Link to a travel event.  A VATravelVoucher should have two assertions using this property.  One assertion denotes travel to a VA treatment facility.  The other assertion denotes travel away from a  VA treatment facility.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasAdditionalExpense -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasAdditionalExpense">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#Voucher"/>
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasAddressUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasAddressUnit">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasAge"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasArrestRecord -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasArrestRecord">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasBodyType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasBodyType"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasComplexion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasComplexion"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasCriminalRecord -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasCriminalRecord">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasDateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasDateOfBirth"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasDeclaredBankruptcy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasDeclaredBankruptcy">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasDocumentDateSigned -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasDocumentDateSigned">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Text"/>
+        <rdfs:comment xml:lang="en">The date that a doucment was signed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+	
+
+	<!-- http://www.mitre.org/analysisexchange/AE.owl#hasEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasEndTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#hasTime"/>
+    </owl:DatatypeProperty>
+
+	
+	
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasFatalityCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasFatalityCount">
+        <rdfs:comment>@MITRE The number of individuals killed in an event.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasFips10Code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasFips10Code"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasFirstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasFirstName">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasGender"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasHairColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasHairColor"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasHeight"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasISO31661Code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasISO31661Code"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasInteractionCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasInteractionCode">
+        <rdfs:comment>@MITRE Used for the ACLED data set.  The type of interaction between the entities participating in an ACLED event.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasLastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasLastName">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasLatitude"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasLiens -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasLiens">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasLongitude"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasRace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasRace"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasSignatureDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasSignatureDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject"/>
+    </owl:DatatypeProperty>
+    
+
+	
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasStartTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#hasTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasStreetName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasStreetName"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasStreetNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasStreetNumber">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasTime"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasUnitOfMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasUnitOfMeasure">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVISN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVISN">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Building"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasVoucherExpense -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasVoucherExpense">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#Voucher"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasWeight"/>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#hasZipcode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#hasZipcode">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#numericValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#numericValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#poBox -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mitre.org/analysisexchange/AE.owl#poBox">
+        <rdfs:domain rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#hasEyeColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#hasEyeColor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#AcquireCorporation -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#AcquireCorporation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ChangeOfPossession"/>
+        <rdfs:comment>@MITRE An event in which a person or group of people legally assume ownership of a corporation and assumes responsibility for the corporation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Age -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Age">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TimeDuration"/>
+        <rdfs:comment>@MITRE A measurement, typically in years, of the time between an entity came into being and some end point.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#AnthropogenicDisaster -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#AnthropogenicDisaster">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Process"/>
+        <rdfs:comment>@Wikipedia Anthropogenic hazards are hazards caused by human action or inaction.</rdfs:comment>
+    </owl:Class>
+    
+	
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ArrestRecord -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ArrestRecord">
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#CriminalRecord"/>
+        <rdfs:comment>@MITRE A document containing accounts of arrests of a particular person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#BankruptcyDocument -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#BankruptcyDocument">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Document"/>
+        <rdfs:comment>@MITRE A document describing the details of a bankruptcy filing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#BluntWeapon -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#BluntWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment>@Wikipedia Blunt weapons are primarily mêlée weapons designed to use blunt trauma to inflict damage on their targets. Most are club-like, and rely on the user&apos;s strength and the mass of the weapon to create blunt force.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#BuyService -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#BuyService">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Buying"/>
+        <rdfs:comment>@MITRE The act of hiring a company to perform a service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#CaseNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#CaseNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@MITRE Added for NetOWL mapping entity:numeric:case
+@NetOWL Case number</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ChemicalSubstance -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ChemicalSubstance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Substance"/>
+        <rdfs:comment>@Wikipedia A chemical substance[1] also known as a pure substance is a form of matter that has constant chemical composition and characteristic properties.[2] It cannot be separated into components by physical separation methods, i.e., without breaking chemical bonds.[3] Chemical substances can be chemical elements, chemical compounds, ions or alloys.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#CivilianAttack -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#CivilianAttack">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Attack"/>
+        <rdfs:comment>@MITRE An attack event in which the victims are civilians.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Crashing -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Crashing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Damaging"/>
+        <rdfs:comment>@MITRE An event in which physical objects collide with one another.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#CreditCardNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#CreditCardNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@MITRE The number that idientifies a credit card</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#CriminalRecord -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#CriminalRecord">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Document"/>
+        <rdfs:comment>@MITRE A document containing accounts of criminal activity attributed to an individual</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#CyberAttack -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#CyberAttack">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Maneuver"/>
+        <rdfs:comment>@Wikipedia A cyberattack is any type of offensive manoeuvre employed by nation-states, individuals, groups, or organizations that targets computer information systems, infrastructures, computer networks, and/or personal computer devices by various means of malicious acts usually originating from an anonymous source that either steals, alters, or destroys a specified target by hacking into a susceptible system.[</rdfs:comment>
+    </owl:Class>
+	
+	
+	
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#DeclareBankruptcy -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#DeclareBankruptcy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#RegulatoryProcess"/>
+        <rdfs:comment>@MITRE An event in which a person or an organization declares bankruptcy.
+@Wikipedia Bankruptcy is a legal status of a person or other entity that cannot repay the debts it owes to creditors. In most jurisdictions, bankruptcy is imposed by a court order, often initiated by the debtor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Defecting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Defecting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LeavingAnOrganization"/>
+        <rdfs:comment>@Wikipedia In politics, a defector is a person who gives up allegiance to one state in exchange for allegiance to another, in a way which is considered illegitimate by the first state.[1] More broadly, it involves abandoning a person, cause, or doctrine to which one is bound by some tie, as of allegiance or duty.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Deploying -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Deploying">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Putting"/>
+        <rdfs:comment>@WordNet to distribute systematically or strategically</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Divorcing -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Divorcing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Declaring"/>
+        <rdfs:comment>@MITRE An event is which a marraige is terminated.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#DomainNameSystemAddress -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#DomainNameSystemAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternetAddress"/>
+        <rdfs:comment>@Wikipedia The Domain Name System (DNS) is a hierarchical decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates more readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols. By providing a worldwide, distributed directory service, the Domain Name System is an essential component of the functionality on the Internet, that has been in use since 1985.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#EstablishBase -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#EstablishBase">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Founding"/>
+        <rdfs:comment>@MITRE The act of establishig control over an area or building.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#EthnicMilitia -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#EthnicMilitia">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#MilitaryForce"/>
+        <rdfs:comment>@Wikipedia A militia /mᵻˈlɪʃə/[1] is generally an army or some other type of fighting unit that is composed of non-professional fighters, citizens of a nation or subjects of a state or government who can be called upon to enter a combat situation, as opposed to a professional force of regular, full-time military personnel, or historically, members of a warrior nobility class (e.g., knights or samurai). Unable to hold their own against properly trained and equipped professional forces, it is common for militias to engage in guerrilla warfare or defense instead of being used in open attacks and offensive actions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Expelling -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Expelling">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment>@MITRE</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ExplosiveWeapon -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ExplosiveWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment>@Wikipedia An explosive weapon generally uses high explosive to project blast and often fragmentation from a point of detonation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ExternalForce -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ExternalForce">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment>@MITRE For ACLED dataset
+@MITRE A group of individuals that form a &quot;force&quot; that is not formerly associated with a political, ehtnic, nor goverbment organization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Extorting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Extorting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment>@Wikipedia Extortion (also called shakedown, outwrestling and exaction) is a criminal offense of obtaining money, property, or services from an individual or institution, through coercion. It is sometimes euphemistically referred to as a &quot;protection racket&quot; since the racketeers often phrase their demands as payment for &quot;protection&quot; from (real or hypothetical) threats from unspecified other parties.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Extradition -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Extradition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PoliticalProcess"/>
+        <rdfs:comment>@Wikipedia Extradition is a cooperative law enforcement process by which the physical custody of a person (i) charged with committing a crime or (ii) convicted of a crime whose punishment has not yet been fully served, is formally transferred, directly or indirectly, by authorities of one jurisdiction to those of another at the request of the latter for the purpose of prosecution or punishment, respectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#FacilityAddress -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#FacilityAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PlaceAddress"/>
+        <rdfs:comment>@MITRE The address of a physical facility.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#FreezeAssests -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#FreezeAssests">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment>@Wordnet &quot;prohibit the conversion or use of (assets)&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#FundRaising -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#FundRaising">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Getting"/>
+        <rdfs:comment>@Wordnet raise money for a cause or project</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#GovernmentForce -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#GovernmentForce">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#MilitaryOrganization"/>
+        <rdfs:comment>@MITRE A group of people that forms a force that is associated with a formal government.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Hashtag -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Hashtag">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SymbolicString"/>
+        <rdfs:comment>@Wikipedia A hashtag is a type of metadata tag used on social network and microblogging services which makes it easier for users to find messages with a specific theme or content. Users create and use hashtags by placing the number sign or pound sign (colloquially known as the hash character # in reference to its resemblance to several slices or chops with a sharp implement) in front of a word or unspaced phrase, either in the main text of a message or at the end. Searching for that hashtag will yield each message that has been tagged with it. A hashtag archive is consequently collected into a single stream under the same hashtag.[1] For example, on the photo-sharing service Instagram, the hashtag #bluesky allows users to find all the posts that have been tagged using that hashtag.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#IMEI -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#IMEI">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@MITRE International Mobile Equipment Identity.
+@Wikipedia The International Mobile Equipment Identity or IMEI /aɪˈmiː/[1] is a number, usually unique,[2][3] to identify 3GPP and iDEN mobile phones, as well as some satellite phones. It is usually found printed inside the battery compartment of the phone, but can also be displayed on-screen on most phones by entering *#06# on the dialpad, or alongside other system information in the settings menu on smartphone operating systems.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#IMSI -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#IMSI">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@MITRE International Mobile Subscriber Identity
+@Wikipedia The International Mobile Subscriber Identity or IMSI /ˈɪmziː/ is used to identify the user of a cellular network and is a unique identification associated with all cellular networks. It is stored as a 64 bit field and is sent by the phone to the network. It is also used for acquiring other details of the mobile in the home location register (HLR) or as locally copied in the visitor location register. To prevent eavesdroppers identifying and tracking the subscriber on the radio interface, the IMSI is sent as rarely as possible and a randomly generated TMSI is sent instead.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#INSAlienRegistrationNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#INSAlienRegistrationNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@USCIS.gov A unique seven-, eight- or nine-digit number assigned to a noncitizen at the time his or her A-file is created. The 9-digit U.S. Citizenship and Immigration Services number listed on the front of Permanent Resident Cards (Form I-551) issued after May 10, 2010, is the same as the Alien Registration Number. The A-number can also be found on the back of these Permanent Resident Cards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#IllegalDrug -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#IllegalDrug">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Substance"/>
+        <rdfs:comment>@MITRE A drug that is illegal to consume with out medical or other legally recognized permission.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ImposeTradeEmbargo -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ImposeTradeEmbargo">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#RegulatoryProcess"/>
+        <rdfs:comment>@MITRE An event in which a govern declares restricted trade with organizations of another government.
+
+@Wikipedia An embargo (from the Spanish embargo, meaning hindrance, obstruction, etc. in a general sense, a trading ban in trade terminology and literally &quot;distraint&quot; in juridic parlance) is the partial or complete prohibition of commerce and trade with a particular country or a group of countries.[1] Embargoes are considered strong diplomatic measures imposed in an effort, by the imposing country, to elicit a given national-interest result from the country on which it is imposed. Embargoes are similar to economic sanctions and are generally considered legal barriers to trade, not to be confused with blockades, which are often considered to be acts of war.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolAddress -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternetAddress"/>
+        <rdfs:comment>@Wikipedia An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.[1] An IP address serves two principal functions: host or network interface identification and location addressing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolV4Address -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolV4Address">
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolAddress"/>
+        <rdfs:comment>@Wikipedia An IP address in IPv4 is 32-bits in size, which limits the address space to 4294967296 (232) IP addresses. Of this number, IPv4 reserves some addresses for special purposes such as private networks (~18 million addresses) or multicast addresses (~270 million addresses).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolV6Address -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolV6Address">
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#InternetProtocolAddress"/>
+        <rdfs:comment>@Wikipedia An Internet Protocol Version 6 address (IPv6 address) is a numerical label that is used to identify a network interface of a computer or other network node participating in an IPv6 computer network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Invading -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Invading">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ViolentContest"/>
+        <rdfs:comment>@WordNet march aggressively into another&apos;s territory by military force for the purposes of conquest and occupation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalAcquittal -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalAcquittal">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment>@Wikipedia In the common law tradition, an acquittal formally certifies that the accused is free from the charge of an offense, as far as the criminal law is concerned. This is so even where the prosecution is abandoned nolle prosequi. The finality of an acquittal is dependent on the jurisdiction. In some countries, such as the United States, under the rules of double jeopardy and autrefois acquit, an acquittal operates to bar the retrial of the accused for the same offense, even if new evidence surfaces that further implicates the accused. The effect of an acquittal on criminal proceedings is the same whether it results from a jury verdict, or whether it results from the operation of some other rule that discharges the accused. In other countries, the prosecuting authority may appeal an acquittal similar to how a defendant may appeal a conviction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalFine -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalFine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ChargingAFee"/>
+        <rdfs:comment>@MITRE The act of charging a individual a fee for as a part of legal action.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalHearing -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalHearing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Investigating"/>
+        <rdfs:comment>@Wikipedia n law, a hearing is a proceeding before a court or other decision-making body or officer, such as a government agency[1] or a Parliamentary committee.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalIndicting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalIndicting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment>@Wikipedia An indictment (/ɪnˈdaɪtmənt/ in-DYT-mənt), in the common law system, is a formal accusation that a person has committed a crime. In jurisdictions that use the concept of felonies, the most serious criminal offence is a felony; jurisdictions that do not use the concept of felonies often use that of an indictable offence—an offence that requires an indictment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalPardon -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalPardon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment>@Wikipedia A pardon is a government decision to allow a person who has been convicted of a crime to be free and absolved of that conviction, as if he or she were never convicted.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalParole -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalParole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment>@Wikipedia Parole is a temporary release of a prisoner who agrees to certain conditions before the completion of the maximum sentence period, originating from the French parole (&quot;voice&quot;, &quot;spoken words&quot;). The term became associated during the Middle Ages with the release of prisoners who gave their word.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalRelease -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalRelease">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment>@MITRE The act of releasing a person from confinement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LegalTrialProcess -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LegalTrialProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment>@Wikipedia In law, a trial is a coming together of parties to a dispute, to present information (in the form of evidence) in a tribunal, a formal setting with the authority to adjudicate claims or disputes. One form of tribunal is a court. The tribunal, which may occur before a judge, jury, or other designated trier of fact, aims to achieve a resolution to their dispute.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LicensePlateNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LicensePlateNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@Wikipedia A vehicle registration plate, also known as a number plate (British English) or a license plate (American English), is a metal or plastic plate attached to a motor vehicle or trailer for official identification purposes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#LienDocument -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#LienDocument">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Document"/>
+        <rdfs:comment>@MITRE A document describing property that is the target of a legel lien.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#MergeCorporations -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#MergeCorporations">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE A process of merging the operations of two or more corporations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#MoneyLaundering -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#MoneyLaundering">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment>@Wordnet &quot;convert illegally obtained funds into legal ones&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NoChangeOfTerritoryBattle -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NoChangeOfTerritoryBattle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Battle"/>
+        <rdfs:comment>@ACLED A battle in which there is no change in the control of a location that is contested.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Nominating -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Nominating">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE A process in which an individual is selected to campaign for a polotical office.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NuclearSubstance -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NuclearSubstance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Substance"/>
+        <rdfs:comment>@MITRE A substance that is composed of nuclear material.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Ousting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Ousting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PoliticalProcess"/>
+        <rdfs:comment>@MITRE The act of removing a person or group from political control.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#OvertakeTerritoryBattle -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#OvertakeTerritoryBattle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Battle"/>
+        <rdfs:comment>@ACLED A battle in which a group takes control of a territory.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#PassportNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#PassportNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@MITRE A unique number that identifies a Passport.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#PoliticalMilitia -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#PoliticalMilitia">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#MilitaryForce"/>
+        <rdfs:comment>@Wikipedia A militia /mᵻˈlɪʃə/[1] is generally an army or some other type of fighting unit that is composed of non-professional fighters, citizens of a nation or subjects of a state or government who can be called upon to enter a combat situation, as opposed to a professional force of regular, full-time military personnel, or historically, members of a warrior nobility class (e.g., knights or samurai). Unable to hold their own against properly trained and equipped professional forces, it is common for militias to engage in guerrilla warfare or defense instead of being used in open attacks and offensive actions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#PositionPromoting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#PositionPromoting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransferringPosition"/>
+        <rdfs:comment>@MITRE The act of assigning a person to a position in an organization that requires the person to perform additional duties above and beyond the responsibilities that the person once had.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#PostalAddress -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#PostalAddress">
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#FacilityAddress"/>
+        <rdfs:comment>@Wiktionary The address (of a person or business) to which mail is delivered, as distinct from the actual street address.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ProductRecall -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ProductRecall">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Requesting"/>
+        <rdfs:comment>@MITRE The act of requesting that a product be returned to the manufacturer to fix a defect.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Protest -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Protest">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Demonstration"/>
+        <rdfs:comment>@Wikipedia A protest (also called a remonstrance, remonstration or demonstration) is an expression of bearing witness on behalf of an express cause by words or actions with regard to particular events, policies or situations. Protests can take many different forms, from individual statements to mass demonstrations. Protesters may organize a protest as a way of publicly making their opinions heard in an attempt to influence public opinion or government policy, or they may undertake direct action in an attempt to directly enact desired changes themselves. Where protests are part of a systematic and peaceful campaign to achieve a particular objective, and involve the use of pressure as well as persuasion, they go beyond mere protest and may be better described as cases of civil resistance or nonviolent resistance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Protester -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Protester">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialRole"/>
+        <rdfs:comment>@Wikipedia  A protest (also called a remonstrance, remonstration or demonstration) is an expression of bearing witness on behalf of an express cause by words or actions with regard to particular events, policies or situations. Protests can take many different forms, from individual statements to mass demonstrations. Protesters may organize a protest as a way of publicly making their opinions heard in an attempt to influence public opinion or government policy, or they may undertake direct action in an attempt to directly enact desired changes themselves.[2] Where protests are part of a systematic and peaceful campaign to achieve a particular objective, and involve the use of pressure as well as persuasion, they go beyond mere protest and may be better described as cases of civil resistance or nonviolent resistance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Rebel -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Rebel">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialRole"/>
+        <rdfs:comment>@Wikipedia A rebel is a participant in a rebellion.
+@Wikipedia Rebellion, uprising, or insurrection is a refusal of obedience or order.[1] It refers to the open resistance against the orders of an established authority. The term comes from the Latin verb rebellō, &quot;I renew war&quot; (from re- (&quot;again&quot;) + bellō (&quot;I wage war/I revolt&quot;). The rebel is the individual that partakes in rebellion or rebellious activities, particularly when armed. Thus, the term rebellion also refers to the ensemble of rebels in a state of revolt.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#RebelForce -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#RebelForce">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#MilitaryForce"/>
+        <rdfs:comment>@Wikipedia Rebellion, uprising, or insurrection is a refusal of obedience or order.[1] It refers to the open resistance against the orders of an established authority. The term comes from the Latin verb rebellō, &quot;I renew war&quot; (from re- (&quot;again&quot;) + bellō (&quot;I wage war/I revolt&quot;). The rebel is the individual that partakes in rebellion or rebellious activities, particularly when armed. Thus, the term rebellion also refers to the ensemble of rebels in a state of revolt.
+@MITRE A rebel force is a group of people supporting a rebellion.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#RegainTerritoryBattle -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#RegainTerritoryBattle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Battle"/>
+        <rdfs:comment>@ACLED A battle in which the government regains control of a location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#RemoteAttack -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#RemoteAttack">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Attack"/>
+        <rdfs:comment>@ACLED Remote violence refers to events in which the tool for engaging in conflict did not require the physical presence 9of the perpetrator.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#RequestCorporationOwnership -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#RequestCorporationOwnership">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE The act of attempting to acquire legal ownership of a corporation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Retreat -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Retreat">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Leaving"/>
+        <rdfs:comment>@MITRE Removing a person or group of people from an area.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Rioter -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Rioter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialRole"/>
+        <rdfs:comment>@Wikipedia A riot (/ˈraɪət/) is a form of civil disorder commonly characterized by a group lashing out in a violent public disturbance against authority, property or people. Riots typically involve vandalism and the destruction of property, public or private. The property targeted varies depending on the riot and the inclinations of those involved. Targets can include shops, cars, restaurants, state-owned institutions, and religious buildings.
+@MITRE A rioter is a social role applied to an individual who engages in a riot.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#SellCorporation -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#SellCorporation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Selling"/>
+        <rdfs:comment>@MITRE An event in which a corporation is sold to another organization or person who assumes control of the corporation that is sold.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LinguisticExpression"/>
+        <rdfs:comment>@Wiktionary &quot;A general thought, feeling, or sense.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#SexualAssaulting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#SexualAssaulting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CriminalAction"/>
+        <rdfs:comment>@MITRE An assault that involves sexually activity that is not consensual.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#SharpWeapon -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#SharpWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment>@MITRE A weapon with a sharp edge such as a knife.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#ShutDownCorporation -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#ShutDownCorporation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE The act of dissolving a corporation with the effect of terminating the service that the organization offers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#SocialSecurityNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#SocialSecurityNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@MITRE A unique number that identifies a US citizen.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#StartCorporation -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#StartCorporation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE The act of forming a corporation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#StrategicDevelopment -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#StrategicDevelopment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE The act of accomplishing a goal that contributes to the success of a bigger goal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#StreetAddress -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#StreetAddress">
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#FacilityAddress"/>
+        <rdfs:comment>@Wiktionary The address of a building, typically comprising a house number, street name, city, and postcode.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#SucceedingPosition -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#SucceedingPosition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment>@MITRE The act of one person assuming a position that someone else occupied.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Sue -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Sue">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LegalAction"/>
+        <rdfs:comment>@Wikipedia A lawsuit (or suit in law[a]) is &quot;a vernacular term for a suit, action, or cause instituted or depending between two private persons in the courts of law.&quot; The term refers to any proceeding by a party or parties against another in a court of law.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Surrendering -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Surrendering">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Cooperation"/>
+        <rdfs:comment>@WordNet give up or agree to forgo to the power or possession of another</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#TelephoneNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#TelephoneNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@Wikipedia A telephone number is a sequence of digits assigned to a fixed-line telephone subscriber station connected to a telephone line or to a wireless electronic telephony device, such as a radio telephone or a mobile telephone, or to other devices for data transmission via the public switched telephone network (PSTN) or other private networks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#TerritoryTransfer -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#TerritoryTransfer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#UnilateralGetting"/>
+        <rdfs:comment>@MITRE An event in which one group takes over control of a land area from another group.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Training -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Training">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Learning"/>
+        <rdfs:comment>@WordNet undergo training or instruction in preparation for a particular role, function, or profession;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Travelling -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Travelling">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment xml:lang="en">A travel event from one location to another location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedAccount -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedAccount">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialAccount"/>
+        <rdfs:comment xml:lang="en">@MITRE &quot;An unknown financial account type.  Derived from the NetOWL schema&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedAddress -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PlaceAddress"/>
+        <rdfs:comment>@MITRE An address that cannot be further specified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedArea -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedArea">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeographicArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedArtifact -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedArtifact">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:comment>@MITRE An artifact that cannot be further specified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedOrganization -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment>@MITRE An organiztion that cannot be further specified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedSubstance -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedSubstance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Substance"/>
+        <rdfs:comment>@MITRE A substance that cannot be further specified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedWeapon -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnspecifiedWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment>@MITRE A weapon that cannot be further specified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#VATravelVoucher">
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#Voucher"/>
+        <rdfs:comment xml:lang="en">Veteran/Benericiary Claim For Reimbursement of travel expenses.
+Derived from VA FORM 10-3542 Nov 2013</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#VehicleIndentificationNumber -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#VehicleIndentificationNumber">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Identifier"/>
+        <rdfs:comment>@Wikipedia A vehicle identification number (VIN), also called a chassis number, is a unique code, including a serial number, used by the automotive industry to identify individual motor vehicles, towed vehicles, motorcycles, scooters and mopeds, as defined in ISO 3833.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#Voucher -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#Voucher">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Text"/>
+        <rdfs:comment>@Wikipedia A voucher is a bond of the redeemable transaction type which is worth a certain monetary value and which may be spent only for specific reasons or on specific goods. Examples include housing, travel, and food vouchers. The term voucher is also a synonym for receipt and is often used to refer to receipts used as evidence of, for example, the declaration that a service has been performed or that an expenditure has been made.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#WeaponImpacting -->
+
+    <owl:Class rdf:about="http://www.mitre.org/analysisexchange/AE.owl#WeaponImpacting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Impacting"/>
+        <rdfs:comment>@MITRE An event in which a weapon impacts a physical object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Agent -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Object"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Something or someone that can act on its own and produce changes in the world.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Aircraft -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any Vehicle which is capable of AirTransportation.  Note that this class covers both fixed-wing aircraft and helicopters.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Appointing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Appointing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Declaring"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any instance of &amp;%Declaring by which the patient is assigned to a &amp;%Position within an &amp;%Organization where the patient previously had no position.  For example, the appointments of people to non-elective offices in a government.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Arriving -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Arriving">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The final part of any instance of &amp;%Translocation.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Artifact -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Artifact">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Object"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Object that is the product of a &amp;%Making.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Attack -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Attack">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Maneuver"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Maneuver in a &amp;%ViolentContest where the &amp;%agent attempts to inflict damage on the &amp;%patient.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Battle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Battle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ViolentContest"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%ViolentContest between two or more military units within the context of a war.  Note that this does not cover the  metaphorical sense of &apos;battle&apos;, which simply means a struggle of some sort.  This sense should be represented with the more general concept of &amp;%Contest.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#BiochemicalWeapon -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#BiochemicalWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#WeaponOfMassDestruction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%WeaponOfMassDestruction that is either a &amp;%BiologicalWeapon or a &amp;%ChemicalWeapon, i.e. not a &amp;%RadioactiveWeapon.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#BiologicalProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#BiologicalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternalChange"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Process embodied in an &amp;%Organism.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#BiologicalWeapon -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#BiologicalWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#BiochemicalWeapon"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Weapons which contain a sample of &amp;%ToxicOrganism or a &amp;%BiologicallyActiveSubstance that is produced by a &amp;%ToxicOrganism (or a synthetic analogue of the latter).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#BiologicallyActiveSubstance -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#BiologicallyActiveSubstance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Substance"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Substance that is capable of inducing a change in the structure or functioning of an &amp;%Organism.  This &amp;%Class includes &amp;%Substances used in the treatment, diagnosis, prevention or analysis of normal and abnormal body function.  This &amp;%Class also includes &amp;%Substances that occur naturally in the body and are administered therapeutically.  Finally, &amp;%BiologicallyActiveSubstance includes &amp;%Nutrients, most drugs of abuse, and agents that require special handling because of their toxicity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Building -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Building">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#StationaryArtifact"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The Class of &amp;%StationaryArtifacts which are intended to house &amp;%Humans and their activities.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Buying -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Buying">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%FinancialTransaction in which an instance of &amp;%CurrencyMeasure is exchanged for an instance of &amp;%Physical.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Ceremony -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Ceremony">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%instance of &amp;%Ceremony is a relatively stylized, highly conventional &amp;%SocialInteraction, typically guided or controlled by officials or professionals, to commemorate or mark some transformative event, such as a &amp;%Wedding or a &amp;%Baptizing.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Certificate -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Certificate">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Text"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Text that confers a right or obligation on the holder of the &amp;%Certificate.  Note that the right or obligation need not be a legal one, as in the case of an academic diploma that grants certain privileges in the professional world.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ChangeOfPossession -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ChangeOfPossession">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialInteraction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%Processes where ownership of something is transferred from one &amp;%Agent to another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ChargingAFee -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ChargingAFee">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An activity of a fee being charged&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CheckingAccount -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CheckingAccount">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialAccount"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A bank account against which the depositor can draw checks&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ChemicalWeapon -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ChemicalWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#BiochemicalWeapon"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Weapons that damage or destroy &amp;%Organisms by means of a &amp;%ChemicalAgent.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#City -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#City">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%LandArea of relatively small size, inhabited by a community of people, and having some sort of political structure. Note that this class includes both large cities and small settlements like towns, villages, hamlets, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CityDistrict -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CityDistrict">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%geopoliticalSubdivision of a &amp;%City.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Civilian -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Civilian">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialRole"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Someone who is not a member of an active &amp;%MilitaryOrganization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Classifying -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Classifying">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalPsychologicalProcess"/>
+        <rdfs:comment>@SUMO &quot;The &amp;%Class of &amp;%IntentionalPsychologicalProcesses which involve attaching a name or category to a thing or set of things. Note that &amp;%Classifying is distinguished from &amp;%Learning by the fact that the latter covers the acquisition by a &amp;%CognitiveAgent of any &amp;%Proposition, while the former involves the assignment of a label or category.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CognitiveAgent -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CognitiveAgent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SentientAgent"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%CognitiveAgent is an &amp;%Agent that has the ability to reason, deliberate, make plans, and experience emotions.  Although &amp;%Human is a subclass of &amp;%CognitiveAgent, there may be instances of &amp;%CognitiveAgent which are not also instances of &amp;%Human.  For example, &amp;%Primates, dolphins, whales, and some extraterrestrials (if they exist) might be considered &amp;%CognitiveAgents.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Communication -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Communication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialInteraction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%SocialInteraction that involves the transfer of information between two or more &amp;%CognitiveAgents.  Note that &amp;%Communication is closely related to, but essentially different from, &amp;%ContentDevelopment.  The latter involves the creation or modification of a &amp;%ContentBearingObject, while &amp;%Communication is the transfer of information for the purpose of conveying a message.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CommunicationDevice -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CommunicationDevice">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#EngineeringComponent"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%CommunicationDevice is a &amp;%Device which serves at the &amp;%instrument in a &amp;%Communication &amp;%Process by allowing the communicated message to be conveyed between the participants.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Confining -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Confining">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Keeping"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%Keeping &amp;%Processes where the &amp;%patient is a &amp;%Human or an &amp;%Animal and is kept involuntarily.  This covers caging, imprisonment, jailing, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ConstantQuantity -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ConstantQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PhysicalQuantity"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%ConstantQuantity is a &amp;%PhysicalQuantity that has a constant value, e.g. 3 &amp;%Meters and 5 &amp;%HourDurations.  The magnitude (see &amp;%MagnitudeFn) of every &amp;%ConstantQuantity is a &amp;%RealNumber.  &amp;%ConstantQuantity is distinguished from &amp;%FunctionQuantity, in that each instance of the latter is formed through the mapping of one &amp;%PhysicalQuantity to another &amp;%PhysicalQuantity.  Each instance of &amp;%ConstantQuantity is expressed with the &amp;%BinaryFunction &amp;%MeasureFn, which takes a &amp;%Number and a &amp;%UnitOfMeasure as arguments.  For example, 3 &amp;%Meters is expressed as (&amp;%MeasureFn 3 &amp;%Meter).  Instances of &amp;%ConstantQuantity form a partial order (see &amp;%PartialOrderingRelation) with the &amp;%lessThan relation, since &amp;%lessThan is a &amp;%RelationExtendedToQuantities and &amp;%lessThan is defined over the &amp;%RealNumbers.  The &amp;%lessThan relation is not a total order (see &amp;%TotalOrderingRelation) over the class &amp;%ConstantQuantity since elements of some subclasses of &amp;%ConstantQuantity (such as length quantities) are incomparable to elements of other subclasses of &amp;%ConstantQuantity (such as mass quantities).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ContentBearingObject -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Object"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%SelfConnectedObject that expresses content.  This content may be a &amp;%Proposition, e.g. when the &amp;%ContentBearingObject is a &amp;%Sentence or &amp;%Text, or it may be a representation of an abstract or physical object, as with an &amp;%Icon, a &amp;%Word or a &amp;%Phrase.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Contest -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Contest">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialInteraction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%SocialInteraction where the &amp;%agent and &amp;%patient are &amp;%CognitiveAgents who are trying to defeat one another.  Note that this concept is often applied in a metaphorical sense in natural language, when we speak, e.g., of the struggle of plants for space or sunlight, or of bacteria for food resources in some environment.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Continent -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Continent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LandArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;As defined in the CIA World Fact Book, &amp;%Continent covers seven land masses: &amp;%Africa, &amp;%NorthAmerica, &amp;%SouthAmerica, &amp;%Antarctica, &amp;%Europe, &amp;%Asia, and &amp;%Oceania.  Note that &amp;%Australia, counted as a continent in some other systems, is included in &amp;%Oceania in the Fact Book.  As a consequence, there is no &amp;%Nation which is also a &amp;%Continent.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Cooperation -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Cooperation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialInteraction"/>
+        <rdfs:comment>@SUMO &quot;The &amp;%subclass of &amp;%SocialInteraction where the participants involved work together for the achievement of a common goal.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Corporation -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Corporation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Organization that has a special legal status that allows a group of persons to act as a &amp;%CommercialAgent and that insulates the owners (shareholders) from many liabilities that might result from the corporation&apos;s operation.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#County -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#County">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%GeopoliticalArea that is larger than a city, usually encompassing several cities, and smaller than a &amp;%StateOrProvince.  Aside from City, this is the smallest geopolitical subdivision, and it is known by various names in various counties, e.g.  parrish, commune, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CriminalAction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CriminalAction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%IntentionalProcess that violates a &amp;%Law.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Currency -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Currency">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialInstrument"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any element of the official currrency of some &amp;%Nation.  This covers both &amp;%CurrencyBills and &amp;%CurrencyCoins.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CurrencyMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CurrencyMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ConstantQuantity"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Instances of this &amp;%subclass of &amp;%ConstantQuantity are measures of &amp;%monetaryValue stated in terms of some &amp;%UnitOfCurrency such as &amp;%UnitedStatesDollar, &amp;%UnitedStatesCent, RMB, Lira, Yen, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Damaging -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Damaging">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternalChange"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%Processes where the &amp;%agent brings about a situation where the &amp;%patient no longer functions normally or as intended.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Death -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Death">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganismProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Process of dying.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Declaring -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Declaring">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LinguisticCommunication"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%LinguisticCommunications that effect an institutional alteration when performed by competent authority.  Some examples are nominating, marrying, and excommunicating.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Decreasing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Decreasing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#QuantityChange"/>
+        <rdfs:comment>@SUMO &quot;Any &amp;%QuantityChange where the &amp;%PhysicalQuantity is decreased.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Demonstration -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Demonstration">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PoliticalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A demonstration is the public display of the common opinion of a group of people, whether members of the public, a sector of the community, or an activist group. Topics of demonstrations often deal with politics, economics, and society, or the issues related to it. Thus, such an opinion is demonstrated to be public and significant by gathering in a crowd, usually at a symbolic place or date, associated with that opinion. If a demonstration is targeted against a certain nation, the demonstration would take place infront of the embasy of the nation in question. Demonstrations can be used to show an opinion in protest or as a criticism of a public issue or a perceived grievance or social injustice. First Amendment of the United States Constitution specifically allows demonstrations and the freedom of assembly as part of a measure to facilitate the redress of such grievances. (from Wikipedia)&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Deposit -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Deposit">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment>@SUMO &quot;An Activity of money being transferred into a customer&apos;s account at a financial institution.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Descriptor -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Descriptor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject"/>
+        <rdfs:comment xml:lang="en">@SUMO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Device -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Device">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Device is an &amp;%Artifact whose purpose is to serve as an &amp;%instrument in a specific subclass of &amp;%Process.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Directing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Directing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LinguisticCommunication"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Instances of this &amp;%Class urge some further action among the receivers.  A &amp;%Directing can be an &amp;%Ordering, a &amp;%Requesting or a &amp;%Questioning.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Document -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Document">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject"/>
+        <rdfs:comment>@SUMO &quot;Instances of &amp;%Document are &amp;%ContentBearingObjects that are intended to convey propositional content via &amp;%Text (&amp;%LinguisticExpressions, seen or heard), &amp;%Images, or some combination of these (e.g., an audio clip included in an electronic document consisting mostly of &amp;%VisualText and some &amp;%Images).  Formally, a &amp;%Document constitutes any &amp;%ContentBearingObject that is an &amp;%Artifact conventionally typically intended to be transmitted and assimilated as a meaningful whole.  An &amp;%Article or a &amp;%Book would be a &amp;%Document, but a &amp;%Word or &amp;%Paragraph typically would not.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Downtick -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Downtick">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#StockMarketTransaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A stock market transaction (or sometimes, a quote) at a price lower than the preceding one for the same security.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#DriversLicense -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#DriversLicense">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#License"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%License which identifies the holder and indicates that he has the right to drive a certain class of &amp;%RoadVehicle.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#EducationalOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#EducationalOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%EducationalOrganization is an institution of learning. Some examples are public and private K-12 schools, and colleges and universities.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Election -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Election">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Election is the class of events conducted by an organization, in which qualified participants vote for officers, adopt resolutions, or settle other issues in that &amp;%Organization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#EmailAddress -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#EmailAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternetAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#EmploymentFiring -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#EmploymentFiring">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TerminatingEmployment"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Involuntarily ending one&apos;s employment.  Note that this covers termination due to inadequate performance, as well as layoffs.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#EngineeringComponent -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#EngineeringComponent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Device"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A fundamental concept that applies in many engineering domains.  An &amp;%EngineeringComponent is an element of a &amp;%Device that is a physically whole object, such as one might see listed as standard parts in a catalog.  The main difference betweeen &amp;%EngineeringComponents and arbitrary globs of matter is that %EngineeringComponents are object-like in a modeling sense.  Thus, an &amp;%EngineeringComponent is not an arbtrary subregion, but a part of a system with a stable identity.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Evacuation -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Evacuation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Emergency evacuation is the movement of persons from a dangerous place due to the threat or occurrence of a disastrous event (see also Evacuation). Examples are the evacuation of a building due to a bomb threat or fire and the evacuation of a district because of a flood or bombardment or an evacuation from a city due to a Hurricane. In situations involving hazardous materials or possible contamination, evacuees may be decontaminated prior to being transported out of the contaminated area. (from Wikipedia)&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ExplosiveDevice -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ExplosiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Device"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Device whose purpose is to explode.  Note that &amp;%ExplosiveDevice is not a subclass of &amp;%Weapon, since explosives can be used in demolition work and in fireworks displays, for example.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ExternalTransfer -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ExternalTransfer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment>@SUMO &quot;A subclass of &amp;%FinancialTransactions from one &amp;%FinancialOrganization to another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#FinancialAccount -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#FinancialAccount">
+        <rdfs:comment xml:lang="en">@SUMO &quot;A formal banking, brokerage, or business relationship established to provide for regular services, dealings, and other financial transactions.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#FinancialInstrument -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#FinancialInstrument">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Certificate"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A document having monetary value or recording a monetary transaction&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#FinancialTransaction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Transaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Transaction where an instance of &amp;%FinancialInstrument is the subject of the action, and often is exchanged for something else.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Founding -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Founding">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO Setting up an &amp;%Organization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#GeographicArea -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#GeographicArea">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Region"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A geographic location, generally having definite boundaries.  Note that this differs from its immediate superclass &amp;%Region in that a &amp;%GeographicArea is a three-dimensional &amp;%Region of the earth.  Accordingly, all astronomical objects other than earth and all one-dimensional and two-dimensional &amp;%Regions are not classed under &amp;%GeographicArea.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeographicArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%GeographicArea which is associated with some sort of political structure.  This class includes &amp;%Lands, &amp;%Cities, districts of cities, counties, etc.  Note that the identity of a &amp;%GeopoliticalArea may remain constant after a change in borders.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Getting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Getting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ChangeOfPossession"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%subclass of &amp;%ChangeOfPossession where the &amp;%agent gets something.  Note that the source from which something is obtained is specified with the &amp;%origin &amp;%CaseRole.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Giving -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Giving">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ChangeOfPossession"/>
+        <rdfs:comment>@SUMO &quot;The &amp;%subclass of &amp;%ChangeOfPossession where the &amp;%agent gives the &amp;%destination something.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#GovernmentOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#GovernmentOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%GovernmentOrganization is the class of official &amp;%Organizations that are concerned with the government of a &amp;%GeopoliticalArea at some level.  They may be a &amp;%subOrganization of a government.&quot;)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Guiding -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Guiding">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%IntentionalProcess where the &amp;%agent tries to direct the behavior of another &amp;%Object, whether an &amp;%Agent or not.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Gun -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Gun">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Weapon that shoots a &amp;%Projectile.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Hijacking -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Hijacking">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Robbing"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Robbing a &amp;%Vehicle and then driving or piloting it away.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Hiring -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Hiring">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JoiningAnOrganization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%OrganizationalProcesses where someone is made an employee of an &amp;%Organization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#HostageTaking -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#HostageTaking">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#UnilateralGetting"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An event in which one agent keeps another against his or her will, in order to force it or a third agent to accede to some demand.  The hostages are typically kept in the place where they are first taken hostage, in contrast to a &amp;%Kidnapping.  Hostage taking often involves a number of people (although it may be just one), again, in contrast to a &amp;%Kidnapping.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Human -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Human">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CognitiveAgent"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Modern man, the only remaining species of the Homo genus.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Identifier -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Identifier">
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Identifier is the &amp;%Class of &amp;%ContentBearingObjects that identify some entity,
+such as a bank account, a person, or a location (e.g., as identified by a specific street address or GPS coordinates), perhaps uniquely under some circumstances.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Impacting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Impacting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Touching"/>
+        <rdfs:comment>@SUMO &quot;Any &amp;%Touching where something comes into sudden, forceful, physical contact with something else.  Some examples would be striking, knocking, whipping etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Impelling -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Impelling">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Transfer"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%subclass of &amp;%Transfer where the &amp;%patient travels through space by means of a sudden, forceful event.  Some examples would be shooting, throwing, tossing, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Imprisoning -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Imprisoning">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Confining"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The class of &amp;%Confining processes where the detainee is put in &amp;%Prison.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Increasing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Increasing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#QuantityChange"/>
+        <rdfs:comment>@SUMO &quot;Any &amp;%QuantityChange where the &amp;%PhysicalQuantity is increased.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Index -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Index">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PerformanceMeasure"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A benchmark against which financial or economic performance is measured, such as the S&amp;P 500 or the Consumer Price Index.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Injuring -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Injuring">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Damaging"/>
+        <rdfs:comment>@SUMO &quot;The process of creating a traumatic wound or injury.  Since &amp;%Injuring is not possible without some biologic function of the organism being injured, it is a subclass of &amp;%BiologicalProcess.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#IntentionalProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Process"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Process that has a specific purpose for the &amp;%Agent who performs it.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#IntentionalPsychologicalProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#IntentionalPsychologicalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment>@SUMO &quot;An &amp;%IntentionalProcess is a process that can be realized entirely within the mind or brain of an &amp;%Organism.  Thus,for example, &amp;%Reasoning is a subclass of &amp;%IntentionalPsychologicalProcess, because one can reason simply by exercising one&apos;s mind/brain.  On the other hand, &amp;%RecreationOrExercise is not a subclass of &amp;%IntentionalPsychologicalProcess, because many instances of &amp;%RecreationOrExercise necessarily have &amp;%subProcesses of &amp;%BodyMotion.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#InternalChange -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#InternalChange">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Process"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Processes which involve altering an internal property of an &amp;%Object, e.g. the shape of the &amp;%Object, its coloring, its structure, etc.  &amp;%Processes that are not instances of this class include changes that only affect the relationship to other objects, e.g. changes in spatial or temporal location.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#InternetAddress -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#InternetAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#VirtualAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Investigating -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Investigating">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The class of &amp;%IntentionalPsychologicalProcesses where the &amp;%agent attempts to obtain information (i.e. a &amp;%Proposition denoted by a &amp;%Formula).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#JoiningAnOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#JoiningAnOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%OrganizationalProcess of becoming a &amp;%member of an &amp;%Organization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#JudicialProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#JudicialProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PoliticalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any legal proceeding which is conducted by a &amp;%JudicialOrganization.  Note that there is an important difference between the concepts &amp;%LegalAction and &amp;%JudicialProcess.  The former refers to legal claims that are brought by a plaintiff, e.g. law suits, while the second refers to trials and other sorts of judicial hearings where the merits of a &amp;%LegalAction are decided.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Keeping -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Keeping">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%Processes where the &amp;%agent keeps something in a particular location for an extended period of time.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Kidnapping -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Kidnapping">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Robbing"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An event in which one agent keeps another against his or her will, in order to force it or a third agent to accede to some demand.  The kidnapped party is normally removed from the location where first attacked.  In contrast to a &amp;%HostageTaking, a kidnapping normally involves an attack on one, or a very small number of people, such as a couple.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LandArea -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LandArea">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeographicArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An area which is predominantly solid ground, e.g. a &amp;%Nation, a mountain, a desert, etc.  Note that a &amp;%LandArea may contain some relatively small &amp;%WaterAreas.  For example, Australia is a &amp;%LandArea even though it contains various rivers and lakes.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LandForm -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LandForm">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeographicArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%LandForm is the class of geographically and/or geologically distinct areas that occur on Earth&apos;s surface, including mountains, hills, plains, valleys, deltas, and features of submerged land areas such as the ocean floor.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LandTransitway -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LandTransitway">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LandArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%LandTransitway is the subclass of &amp;%Transitway that represents areas intended for motion over the ground.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LandVehicle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LandVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%LandVehicle is the class of &amp;%TransportationDevices that travel on land.  The two main types of &amp;%LandVehicle are &amp;%RoadVehicle and &amp;%RailVehicle. Note that this includes vehicles which travel on any solid surface, including a frozen body of water or snow.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Learning -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Learning">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalPsychologicalProcess"/>
+        <rdfs:comment>@SUMO &quot;The &amp;%Class of &amp;%Processes which relate to the acquisition of information.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Leaving -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Leaving">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The initial part of any instance of &amp;%Translocation.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LeavingAnOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LeavingAnOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%OrganizationalProcess of leaving an &amp;%Organization, whether voluntarily or involuntarily.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LegalAction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LegalAction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Contest"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%Process where a &amp;%CognitiveAgent seeks to obtain something through a court of law.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LegalAppeal -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LegalAppeal">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Asking that a higher court reconsider a &amp;%LegalDecision of a lower court.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LegalConviction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LegalConviction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LegalDecision"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%LegalDecision where the defendant is found guilty of the crime for which the corresponding trial was held.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LegalDecision -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LegalDecision">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#JudicialProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A decision issued by a court with respect to a &amp;%LegalAction.  Note that a &amp;%LegalDecision is the act of &amp;%Declaring a decision of a court, it is not the act of judge or jury &amp;%Deciding the merits of a particular &amp;%LegalAction.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LengthMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LengthMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ConstantQuantity"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%subclass of &amp;%ConstantQuantity, instances of which are measures of length.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#License -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#License">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Certificate"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;License is the subclass of &amp;%Certificates that are granted by a &amp;%GovernmentOrganization and that authorize the performance of a kind of action, e.g., driving, exporting, travelling to another country, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LinguisticCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LinguisticCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Communication"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Communication that involves the transfer of information via a &amp;%LinguisticExpression.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#LinguisticExpression -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#LinguisticExpression">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject"/>
+        <rdfs:comment>@SUMO &quot;This is the subclass of &amp;%ContentBearingPhysical which are language-related.  Note that this &amp;%Class encompasses both &amp;%Language and the the elements of &amp;%Languages, e.g. &amp;%Words.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Making -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Making">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%subclass of &amp;%Creation in which an individual &amp;%Artifact or a type of &amp;%Artifact is made.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Maneuver -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Maneuver">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An intentional move or play within a &amp;%Contest.  In many cases, a &amp;%Maneuver is a realization of part of a strategy for winning the &amp;%Contest, but it also may be just an arbitrary or semi-arbitrary division of the overarching &amp;%Contest, e.g. innings in a baseball game.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Manufacture -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Manufacture">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Making"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Making of &amp;%Artifacts on a mass scale.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#MediaOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#MediaOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%MediaOrganization is the subclass of &amp;%Organization for groups whose primary purpose is the production or dissemination of media content.  For organizations that physically enable &amp;%Communication, see &amp;%CommunicationOrganization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Meeting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Meeting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialInteraction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The coming together of two or more &amp;%CognitiveAgents for the purpose of &amp;%Communication.  This covers informal meetings, e.g. visits with family members, and formal meetings, e.g. a board of directors meeting.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#MilitaryForce -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#MilitaryForce">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PoliticalOrganization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%MilitaryForce is the subclass of &amp;%Organizations that are organized along military lines and for the purpose of either defensive or offensive combat, whether or not the force is an official &amp;%GovernmentOrganization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+	
+	
+    <!-- http://www.ontologyportal.org/SUMO.owl#MilitaryManeuver -->
+
+	<owl:Class rdf:ID="MilitaryManeuver">
+	  <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+	  <rdfs:subClassOf rdf:resource="#Maneuver"/>
+	  <owl:comment xml:lang="en">Any Maneuver which takes place in a Battle and which is intended to secure a tactical advantage for one of the agents of the Battle.</owl:comment>
+	</owl:Class>
+
+	
+	
+    <!-- http://www.ontologyportal.org/SUMO.owl#MilitaryOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#MilitaryOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GovernmentOrganization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any heavily armed &amp;%Organization that is part of a &amp;%Government and that is charged with representing the &amp;%Government in international conflicts.&quot;</rdfs:comment>
+    </owl:Class>
+
+	
+	
+    <!-- http://www.ontologyportal.org/SUMO.owl#Missle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Missle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Projectile"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Projectile which is propelled by a rocket and contains a &amp;%Bomb.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Motion -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Motion">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%Process of movement.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Name -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Name">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Descriptor"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Name denotes the &amp;%Class of &amp;%ContentBearingObjects that identify an &amp;%Entity, typically in some linguistic form such as an epithet, given name, street address, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Nation -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Nation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The broadest &amp;%GeopoliticalArea, i.e. &amp;%Nations are &amp;%GeopoliticalAreas that are not part of any other overarching and comprehensive governance structure (excepting commonwealths and other sorts of loose international organizations).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#NonprofitOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#NonprofitOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%Organization whose purpose is something other than making a profit.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#NuclearWeapon -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#NuclearWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%ExplosiveDevice and &amp;%RadioactiveWeapon which achieves its effect by means of a critical mass of a radioactive substance.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Object -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Object">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Physical"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Corresponds roughly to the class of ordinary objects.  Examples include normal physical objects, geographical regions, and locations of &amp;%Processes, the complement of &amp;%Objects in the &amp;%Physical class.  In a 4D ontology, an &amp;%Object is something whose spatiotemporal
+extent is thought of as dividing into spatial parts roughly parallel to the time-axis.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#OrganismProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#OrganismProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PhysiologicProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A physiologic function of the &amp;%Organism as a whole, of multiple organ systems or of multiple &amp;%Organs or &amp;%Tissues.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Organization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CognitiveAgent"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Organization is a corporate or similar institution. The &amp;%members of an &amp;%Organization typically have a common purpose or function. Note that this class also covers divisions, departments, etc. of organizations.  For example, both the Shell Corporation and the accounting department at Shell would both be instances of &amp;%Organization.  Note too that the existence of an &amp;%Organization is dependent on the existence of at least one &amp;%member (since &amp;%Organization is a subclass of &amp;%Collection).  Accordingly, in cases of purely legal organizations, a fictitious &amp;%member should be assumed.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%IntentionalProcess that involves an &amp;%Organization.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PerformanceMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PerformanceMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PhysicalQuantity"/>
+        <rdfs:comment xml:lang="en">@SUMO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Physical -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Physical">
+        <rdfs:comment xml:lang="en">@SUMO &quot;An entity that has a location in space-time.  Note that locations are themselves understood to have a location in space-time.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PhysicalQuantity -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PhysicalQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Quantity"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%PhysicalQuantity is a measure of some quantifiable aspect of the modeled world, such as &apos;the earth&apos;s diameter&apos; (a constant length) and &apos;the stress in a loaded deformable solid&apos; (a measure of stress, which is a function of three spatial coordinates).  Every &amp;%PhysicalQuantity is either a &amp;%ConstantQuantity or &amp;%FunctionQuantity.  Instances of &amp;%ConstantQuantity are dependent on a &amp;%UnitOfMeasure, while instances of &amp;%FunctionQuantity are &amp;%Functions that map instances of &amp;%ConstantQuantity to other instances of &amp;%ConstantQuantity (e.g., a &amp;%TimeDependentQuantity is a &amp;%FunctionQuantity).  Although the name and definition of &amp;%PhysicalQuantity is borrowed from physics, a &amp;%PhysicalQuantity need not be material.  Aside from the dimensions of length, time, velocity, etc., nonphysical dimensions such as currency are also possible.  Accordingly, amounts of money would be instances of &amp;%PhysicalQuantity.  A &amp;%PhysicalQuantity is  distinguished from a pure &amp;%Number by the fact that the former is associated with a dimension of measurement.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PhysiologicProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PhysiologicProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#BiologicalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A normal process of an &amp;%Organism or part of an &amp;%Organism.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PlaceAddress -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PlaceAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PlaceDescriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PlaceDescriptor -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PlaceDescriptor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Descriptor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PlacingUnderArrest -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PlacingUnderArrest">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LegalAction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%PlacingUnderArrest is the class of events in which a &amp;%CognitiveAgent, typically a law enforcement professional, legally takes into custody a human or group of humans.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PoliticalOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PoliticalOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Organization that is attempting to bring about some sort of political change.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#PoliticalProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#PoliticalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%OrganizationalProcess carried out by, for or against officially constituted governments.  Some examples would be voting on proposed legislation, electing a government representative, or even overthrowing a government in a revolution.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Position -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Position">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SocialRole"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A formal position of reponsibility within an &amp;%Organization. Examples of &amp;%Positions include president, laboratory director, senior researcher, sales representative, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Process -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Process">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Physical"/>
+        <rdfs:comment>@MITRE An area that cannot be further specified.</rdfs:comment>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The class of things that happen and have temporal parts or stages.  Examples include extended events like a football match or a race, actions like &amp;%Pursuing and &amp;%Reading, and biological processes. The formal definition is: anything that occurs in time but is not an &amp;%Object.  Note that a &amp;%Process may have participants &apos;inside&apos; it which are &amp;%Objects, such as the players in a football match.  In a 4D ontology, a &amp;%Process is something whose spatiotemporal extent is thought of as dividing into temporal stages roughly perpendicular to the time-axis.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Projectile -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Projectile">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A missile, bullet, etc. that is fired from a &amp;%Weapon.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Putting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Putting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Transfer"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%Processes where something is put in a location.  Note that the location is specified with the &amp;%CaseRole &amp;%destination.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Quantity -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Quantity">
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any specification of how many or how much of something there is.  Accordingly, there are two subclasses of &amp;%Quantity: &amp;%Number (how many) and &amp;%PhysicalQuantity (how much).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#QuantityChange -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#QuantityChange">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternalChange"/>
+        <rdfs:comment>@SUMO &quot;Any &amp;%InternalChange where a &amp;%PhysicalQuantity associated with the &amp;%patient is altered.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ReachingAgreement -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ReachingAgreement">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Stating"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Instances of this &amp;%Class are &amp;%Statings in which two or more agents affirm the same thing (acknowledge the truth of the same &amp;%Propositions).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Region -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Region">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Object"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A topographic location.  &amp;%Regions encompass surfaces of &amp;%Objects, imaginary places, and &amp;%GeographicAreas.  Note that a &amp;%Region is the only kind of &amp;%Object which can be located at itself.  Note too that &amp;%Region is not a subclass of &amp;%SelfConnectedObject, because some &amp;%Regions, e.g. archipelagos, have &amp;%parts which are not &amp;%connected with one another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#RegulatoryProcess -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#RegulatoryProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Guiding"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Guiding whose aim is the enforcement of rules or regulations.  Note the key differences between &amp;%RegulatoryProcess and the related concept &amp;%Managing.  The latter implies a long-term relationship between a single manager and limited number of agents who are managed, while the former implies a normative standard to which the activities of the regulated are referred.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ReligiousOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ReligiousOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Organization whose members share a set of religious beliefs.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Requesting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Requesting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Directing"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A request expresses a desire that some future action be performed.  For example, the 5th Battalion requested air support from the 3rd Bomber Group.  Note that this class covers proposals, recommendations, suggestions, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Roadway -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Roadway">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LandTransitway"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Roadway is the subclass of &amp;%LandTransitways that are areas intended for surface travel by self-powered, wheeled vehicles, excluding those that travel on tracks.  &amp;%Roadways have been at least minimally improved to enable the passage of vehicles.  &amp;%Roadways include dirt and gravelled roads, paved streets, and expressways.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Robbing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Robbing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Stealing"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any instance of &amp;%Stealing which involves the threat of the use of force.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SavingsAccount -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#SavingsAccount">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialAccount"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An account in a bank on which interest is usually paid and from which withdrawals can be made usually only by presentation of a passbook or by written authorization on a prescribed form.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Security -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Security">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialInstrument"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An investment instrument, other than an insurance policy or &amp;%FixedAnnuity insurance policy or fixed annuity issued by a corporation, government, or other organization which offers evidence of debt or equity.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SeizingProperty -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#SeizingProperty">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#UnilateralGetting"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any instance of &amp;%UnilateralGetting which is done by a &amp;%Government and which is not permitted by the origin of the &amp;%UnilateralGetting.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Selling -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Selling">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%FinancialTransaction in which an instance of &amp;%Physical is exchanged for an instance of &amp;%CurrencyMeasure.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Sentencing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Sentencing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LegalDecision"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%LegalDecision where the defendant is assigned a punishment for a &amp;%CriminalAction which was the subject of an earlier &amp;%LegalConviction.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SentientAgent -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#SentientAgent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Agent"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%SentientAgent is an &amp;%Agent that is capable of &amp;%Perception and experiences some level of consciousness (see &amp;%ConsciousnessAttribute).  If the &amp;%Agent is able to reason at a comparatively high level (evinced by the ability to learn, plan, and feel emotions), then it is also an instance of &amp;%CognitiveAgent.  A &amp;%DomesticAnimal is a &amp;%SentientAgent, but may or may not be a &amp;%CognitiveAgent, depending on the type of &amp;%Animal.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Share -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Share">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Security"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Certificate, representing one unit of ownership in a corporation, &amp;%MutualFund, or limited partnership.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Shooting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Shooting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Impelling"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%subclass of &amp;%Impelling where the &amp;%patient is a projectile that is fired through the air by means of some sort of &amp;%Device.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SocialInteraction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#SocialInteraction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#IntentionalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%subclass of &amp;%IntentionalProcess that involves interactions between &amp;%CognitiveAgents.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SocialRole -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#SocialRole">
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of all &amp;%Attributes that specify the position or status of a &amp;%CognitiveAgent within an &amp;%Organization or other &amp;%Group.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Spacecraft -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Spacecraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%Vehicle which is capable of &amp;%SpaceTransportation.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#StateOrProvince -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#StateOrProvince">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeopoliticalArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Administrative subdivisions of a &amp;%Nation that are broader than any other political subdivisions that may exist.  This &amp;%Class includes the states of the United States, as well as the provinces of Canada and European countries.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Stating -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Stating">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LinguisticCommunication"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Instances of this &amp;%Class commit the &amp;%agent to some truth.For example, John claimed that the moon is made of green cheese.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#StationaryArtifact -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#StationaryArtifact">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%StationaryArtifact is an &amp;%Artifact that has a fixed spatial location.  Most instances of this &amp;%Class are architectural works, e.g. the Eiffel Tower, the Great Pyramids, office towers, single-family houses, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Stealing -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Stealing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CriminalAction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%UnilateralGetting which is not permitted by the &amp;%origin of the &amp;%UnilateralGetting.  These cases of &amp;%UnilateralGetting are distinguished from ones where the &amp;%destination is the subject of charity or other forms of benefaction.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Stock -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Stock">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialInstrument"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An instrument that signifies an ownership position, or equity, in a &amp;%Corporation, and represents a claim on its proportionate share in the corporation&apos;s assets and profits.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#StockIndex -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#StockIndex">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Index"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any index which is intended to gauge upward or downward trends in stock prices.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#StockMarketTransaction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#StockMarketTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%FinancialTransaction which involves &amp;%Stock and which occurs in a &amp;%StockMarket.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Substance -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Substance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Object in which every part is similar to every other in every relevant respect.  More precisely, something is a &amp;%Substance when it has only arbitrary pieces as parts - any parts have properties which are similar to those of the whole.  Note that a &amp;%Substance may nonetheless have physical properties that vary.  For example, the temperature, chemical constitution, density, etc. may change from one part to another.  An example would be a body of water.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SymbolicString -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#SymbolicString">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of alphanumeric sequences.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TakingOff -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TakingOff">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any instance of &amp;%Translocation which starts on something other than an &amp;%AtmosphericRegion and which has an instance of &amp;%Flying as a &amp;%subProcess.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Telephone -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Telephone">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CommunicationDevice"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Telephone is a &amp;%CommunicationDevice that enables &amp;%LinguisticCommunication between nodes in a &amp;%TelephoneSystem by converting sound into electrical signals that are then transmitted.  When the signals are received, they are converted back into sound.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TerminatingEmployment -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TerminatingEmployment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#LeavingAnOrganization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%OrganizationalProcesses where someone ceases to be an employee of an &amp;%Organization.  Note that this covers being laid off, being fired, and voluntarily leaving a job.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TerroristOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TerroristOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PoliticalOrganization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A  group that uses violent means in an attempt to bring about  their political aims.  Those violent means are
+ distinguished from a war between nations, or a civil war in  that the group is at least partially clandestine and a
+ significant proportion of its acts are against non-military  targets.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Text -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Text">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ContentBearingObject"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%LinguisticExpression or set of &amp;%LinguisticExpressions that perform a specific function related to &amp;%Communication, e.g. express a discourse about a particular topic, and that are inscribed in a &amp;%CorpuscularObject by &amp;%Humans.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TimeDuration -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TimeDuration">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TimeMeasure"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any measure of length of time, with or without respect to the universal timeline.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TimeMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TimeMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ConstantQuantity"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The class of temporal durations (instances of &amp;%TimeDuration) and positions of &amp;%TimePoints and &amp;%TimeIntervals along the universal timeline (instances of &amp;%TimePosition).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TimePoint -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TimePoint">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TimePosition"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An extensionless point on the universal timeline.  The &amp;%TimePoints at which &amp;%Processes occur can be known with various degrees of precision and approximation, but conceptually &amp;%TimePoints are point-like and not interval-like.  That is, it doesn&apos;t make sense to talk about how long a &amp;%TimePoint lasts.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TimePosition -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TimePosition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TimeMeasure"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%TimePoint or &amp;%TimeInterval along the universal timeline from &amp;%NegativeInfinity to &amp;%PositiveInfinity.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Touching -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Touching">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Transfer"/>
+        <rdfs:comment>@SUMO &quot;Any &amp;%Transfer where two &amp;%Objects are brought into immediate physical contact with one another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Transaction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Transaction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#ChangeOfPossession"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%subclass of &amp;%ChangeOfPossession where something is exchanged for something else.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Transfer -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Transfer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%instance of &amp;%Translocation where the &amp;%agent and the &amp;%patient are not the same thing.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TransferringPosition -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TransferringPosition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#OrganizationalProcess"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any process within an &amp;%Organization where a person is moved from one &amp;%Position to another, e.g. the promotion or demotion of an employee.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TransitRoute -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TransitRoute">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Region"/>
+        <rdfs:comment>@SUMO &quot;&amp;%TransitRoute is the class of &amp;%Regions that are paths for &amp;%Motion from one place to another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Translocation -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Translocation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Motion"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Translocation is that class of &amp;%Motions in which an object moves from one place to another.  In the case of round trips, the &amp;%origin and &amp;%destination are the same, but the intervening motion passes through other locations.  &amp;%Translocation represents linear motion, in contrast to rotation or other movement in place.  A vehicle is not necessary, &amp;%Ambulating is a kind of &amp;%Translocation.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Transportation -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Transportation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Translocation"/>
+        <rdfs:comment>@SUMO &quot;&amp;%Motion from one point to another by means of a &amp;%TransportationDevice.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TransportationDevice -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#TransportationDevice">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Device"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%TransportationDevice is a &amp;%Device which serves as the &amp;%instrument in a &amp;%Transportation &amp;%Process which carries the &amp;%patient of the &amp;%Process from one point to another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UniformResourceLocator -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UniformResourceLocator">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#InternetAddress"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The term &amp;%UniformResourceLocator (URL) refers to the subset of URI that identify resources via a representation of their primary access mechanism (e.g., their network location), rather than identifying the resource by name or by some other attribute(s) of that resource (source: http://www.ietf.org/rfc/rfc2396.txt).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UnilateralGetting -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UnilateralGetting">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Getting"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any instance of &amp;%Getting that is not part of a &amp;%Transaction.  In other words, any instance of &amp;%Getting where nothing is given in return.  Some examples of &amp;%UnilateralGetting are:  appropriating, commandeering, stealing, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UnilateralGiving -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UnilateralGiving">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Giving"/>
+        <rdfs:comment>@SUMO &quot;Any instance of &amp;%Giving that is not part of a &amp;%Transaction.  In other words, any instance of &amp;%Giving where nothing is received in return.  Some examples of &amp;%UnilateralGiving are:  honorary awards, gifts, and financial grants.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UnionOrganization -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UnionOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Organization"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;An &amp;%Organization comprised of workers from the same &amp;%Corporation or &amp;%Industry.  The purpose of the &amp;%UnionOrganization is to strengthen its representation in bargaining with the &amp;%Corporation or &amp;%Industry.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Uptick -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Uptick">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#StockMarketTransaction"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A stock market transaction (or sometimes, a quote) at a price higher than the preceding one for the same security.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UserName -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UserName">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#SymbolicString"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The name a person uses to identify himself or herself when logging onto a computer system or online service.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UsingAnAccount -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UsingAnAccount">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment>@SUMO &quot;An activity of using a financial account&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Vehicle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransportationDevice"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%Vehicle is the subclass of &amp;%TransportationDevices that transport passengers or goods from one place to another by moving from one place to the other with them, e.g., cars, trucks, ferries, and airplanes.  Contrast with devices such as pipelines, escalators, or supermarket checkout belts, which carry items from one place to another by means of a moving part, without the device removing from the origin to the destination.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#ViolentContest -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#ViolentContest">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Contest"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A &amp;%Contest where one participant attempts to physically injure another participant.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#VirtualAddress -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#VirtualAddress">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#PlaceAddress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#WaterArea -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#WaterArea">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#GeographicArea"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;A body which is made up predominantly of water, e.g. rivers, lakes, oceans, etc.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#WaterVehicle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#WaterVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;&amp;%WaterVehicle is the class of all &amp;%TransportationDevices used to travel on or in water.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Weapon -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Weapon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Device"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;The &amp;%Class of &amp;%Devices that are designed primarily to damage or destroy &amp;%Humans/&amp;%Animals, &amp;%StationaryArtifacts or the places inhabited by &amp;%Humans/&amp;%Animals.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#WeaponOfMassDestruction -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#WeaponOfMassDestruction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Weapon"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Nuclear, chemical and biological weapons.  What these weapons have in common is that they are designed to kill large numbers of people indiscriminately.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Wedding -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Wedding">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Ceremony"/>
+        <rdfs:comment xml:lang="en">@SUMO &quot;Any &amp;%Declaring that leads to one person being the &amp;%spouse of another.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Withdrawal -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Withdrawal">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#FinancialTransaction"/>
+        <rdfs:comment>@SUMO &quot;An activity of money being transferred from a customer&apos;s account at a financial institution.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NeutralSentiment -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NeutralSentiment">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NoArrestRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NoArrestRecord">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#ArrestRecord"/>
+        <rdfs:comment>Maps to False</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NoBankruptcyReport -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NoBankruptcyReport">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#BankruptcyDocument"/>
+        <rdfs:comment>Maps to False</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NoCriminalRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NoCriminalRecord">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#CriminalRecord"/>
+        <rdfs:comment>Maps to False</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#NoLienReport -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#NoLienReport">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#LienDocument"/>
+        <rdfs:comment>Maps to False</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#StrongNegativeSentiment -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#StrongNegativeSentiment">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#StrongPositiveSentiment -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#StrongPositiveSentiment">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnknownArrestRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnknownArrestRecord">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#ArrestRecord"/>
+        <rdfs:comment>Maps to True</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnknownBankruptcyReport -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnknownBankruptcyReport">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#BankruptcyDocument"/>
+        <rdfs:comment>Maps to True</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnknownCriminalRecord -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnknownCriminalRecord">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#CriminalRecord"/>
+        <rdfs:comment>Maps to True</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#UnknownLienReport -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#UnknownLienReport">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#LienDocument"/>
+        <rdfs:comment>Maps to True</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#WeakNegativeSentiment -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#WeakNegativeSentiment">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#WeakPositiveEmoticon -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#WeakPositiveEmoticon">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mitre.org/analysisexchange/AE.owl#WeakPositiveSentiment -->
+
+    <owl:NamedIndividual rdf:about="http://www.mitre.org/analysisexchange/AE.owl#WeakPositiveSentiment">
+        <rdf:type rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#SentimentExpression"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
